@@ -1,0 +1,469 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    background-color: #222;
+}
+
+.header
+{
+    position: absolute;
+    top:0 ;
+    left:0 ;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    z-index: 100;
+}
+
+header .logo img 
+{
+    max-width: 180px;
+}
+
+.navigation
+{
+    list-style:none ;
+    margin: 0 10px;
+}
+
+header ul li
+{
+    list-style: none;
+    display: inline-flex;
+    margin-left: 50px;
+}
+.navigation li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    font-size: small;
+    
+}
+
+.navigation li:hover a{
+    color: grey;
+}
+
+.pic{
+    position: relative;
+    width:100% ;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex; 
+    background-image: url(m.jfif);
+    background-size: 80%;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-position: 400px 0px;
+}
+
+.pic .con{
+
+  font-size: 2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 3rem;
+  background-image: linear-gradient(to right,
+    rgb(0, 0, 0, 1) 70%,
+    rgba(0,0,0,.8) 85%,
+    rgba(0,0,0,.5) 95%,
+    rgba(0,0,0,0) 100%);
+   height: 100%;
+   width: 40vw;
+   color: #fff;
+   padding: 30px 100px;
+
+}
+.con{
+    text-align: center;
+}
+.con h4{
+  margin-top: 120px;
+  margin-bottom: 15px;
+}
+
+.con p{
+    font-size: 15px;
+}
+
+.show-btn{
+    background: #fff;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  }
+  .show-btn, .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: fit-content;
+    width: 100px;
+    font-size: large;
+    font-weight: bolder;
+
+  }
+  
+  input[type="checkbox"]{
+    display: none;
+  }
+  .container{
+    margin-top: -50px;
+    display: none;
+    background: #fff;
+    width: 340px;
+    height: fit-content;
+    padding: 30px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    color: black;
+    border-radius: 12px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+  #show:checked ~ .container{
+    display: block;
+  }
+
+  .container .close-btn{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  .container .close-btn:hover{
+    color: #3498db;
+  }
+  .container form{
+    margin-top: -30px;
+  }
+  .container form .data{
+    height: 40px;
+    width: 100%;
+    margin: 30px 0;
+  }
+  form .data label{
+    font-size: 17px;
+  }
+  form .data input{
+    height: 80%;
+    width: 100%;
+    padding-left: 10px;
+    font-size: 12px;
+    border: 1px solid silver;
+  }
+  form .data input:focus{
+    border-color: #3498db;
+    border-bottom-width: 2px;
+  }
+  form .forgot-pass{
+    margin-top: 10px;
+  }
+  form .forgot-pass a{
+    color: #3498db;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  form .forgot-pass a:hover{
+    text-decoration: underline;
+    
+  }
+  form .btn{
+    margin: 10px 0;
+    height: 45px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+
+  }
+  form .btn .inner{
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    left: -100%;
+    z-index: -1;
+    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+    transition: all 0.4s;
+  }
+  form .btn:hover .inner{
+    left: 0;
+  }
+  form .btn button{
+    height: 100%;
+    width: 100%;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: large;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  form .signup-link{
+    text-align: center;
+    font-size: small;
+    color: black;
+
+  }
+  form .signup-link a{
+    color: #3498db;
+    text-decoration: none;
+    font-size: small;
+  }
+  form .signup-link a:hover{
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 900px){
+
+    bofy{
+      overflow-y: hidden ;
+    
+    }
+    .header
+    {
+        position: absolute;
+        top:0 ;
+        left:10px ;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 100px;
+        z-index: 100;
+    }
+    
+    header .logo img 
+    {
+        max-width: 120px;
+    }
+    
+    .navigation
+    {
+        list-style:none ;
+        margin: 0 10px;
+    }
+    
+    header ul li
+    {
+        list-style: none;
+        display: inline-flex;
+        margin-left: 20px;
+    }
+    .navigation li a{
+        color: #fff;
+        text-decoration: none;
+        font-weight: bolder;
+        letter-spacing: 1px;
+        font-size: small;
+        
+    }
+    
+    .navigation li:hover a{
+        color: grey;
+    }
+    
+    .pic{
+        position: relative;
+        width:auto ;
+        min-height: 100vh;
+        padding: 0 100px;
+        display: flex; 
+        background-image: url(m.jfif);
+        background-size: 120%;
+        background-repeat: no-repeat; 
+        background-position: -70px 0px;
+    }
+    
+    .pic .con{
+    
+      font-size: 2rem;
+      position: absolute;
+      left: 0;
+      top: 500px;
+      padding: 3rem;
+      background-image: linear-gradient(to right,
+        rgb(0, 0, 0, 1) 70%,
+        rgba(0,0,0,.8) 85%,
+        rgba(0,0,0,.5) 95%,
+        rgba(0,0,0,0) 100%);
+       color: #fff;
+       padding: 30px 100px;
+       width: 100%;
+       height: 70%;
+    }
+    .con{
+        text-align: center;
+        
+    
+    }
+    .con h4{
+      margin-top: 20px;
+      margin-bottom: 15px;
+      font-size: large;
+      margin-left: 50px;
+    }
+    
+    .con p{
+        font-size: 15px;
+        margin-left: 20px;
+    }
+    
+    .show-btn{
+        background: #fff;
+        padding: 10px 20px;
+        font-size: 15px;
+        font-weight: 500;
+        color: black;
+        cursor: pointer;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        margin-left: 15px;
+        margin-top: -200px;
+      }
+      .show-btn, .container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: fit-content;
+        width: 100px;
+        font-size: large;
+        font-weight: bolder;
+    
+      }
+      
+      input[type="checkbox"]{
+        display: none;
+      }
+      .container{
+        margin-top: -130px;
+        margin-left: 10px;
+        display: none;
+        background: #fff;
+        width: auto;
+        height: fit-content;
+        padding: 30px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        color: black;
+        border-radius: 12px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        float: none;
+    
+      }
+      #show:checked ~ .container{
+        display: block;
+      }
+    
+      .container .close-btn{
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      .container .close-btn:hover{
+        color: #3498db;
+      }
+      .container form{
+        margin-top: -30px;
+      }
+      .container form .data{
+        height: 40px;
+        width: 100%;
+        margin: 30px 0;
+      }
+      form .data label{
+        font-size: 17px;
+      }
+      form .data input{
+        height: 80%;
+        width: 100%;
+        padding-left: 10px;
+        font-size: 12px;
+        border: 1px solid silver;
+      }
+      form .data input:focus{
+        border-color: #3498db;
+        border-bottom-width: 2px;
+      }
+      form .forgot-pass{
+        margin-top: 10px;
+      }
+      form .forgot-pass a{
+        color: #3498db;
+        text-decoration: none;
+        font-size: 15px;
+      }
+      form .forgot-pass a:hover{
+        text-decoration: underline;
+        
+      }
+      form .btn{
+        margin: 10px 0;
+        height: 45px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+    
+      }
+      form .btn .inner{
+        height: 100%;
+        width: 300%;
+        position: absolute;
+        left: -100%;
+        z-index: -1;
+        background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+        transition: all 0.4s;
+      }
+      form .btn:hover .inner{
+        left: 0;
+      }
+      form .btn button{
+        height: 100%;
+        width: 100%;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: large;
+        font-weight: 500;
+        letter-spacing: 1px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      form .signup-link{
+        text-align: center;
+        font-size: small;
+        color: black;
+    
+      }
+      form .signup-link a{
+        color: #3498db;
+        text-decoration: none;
+        font-size: small;
+      }
+      form .signup-link a:hover{
+        text-decoration: underline;
+      }
+    
+    
+  }

@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    background-color: #222;;
+  }
+
+  .header
+{
+    position: absolute;
+    top:0 ;
+    left:0 ;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 90px;
+    z-index: 100;
+}
+
+header .logo img 
+{
+    max-width: 180px;
+}
+
+.navigation
+{
+    list-style:none ;
+    margin: 0 0px;
+}
+
+header ul li
+{
+    list-style: none;
+    display: inline-flex;
+    margin-left: 50px;
+
+}
+.navigation li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    font-size: small;
+    font-family: 'Poppins', sans-serif;
+    
+    
+}
+
+.navigation li:hover a{
+    color: grey;;
+}
+
+  
+  .con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 100px 20px 0 20px;
+  }
+
+  .con .heading{
+    width: 50%;
+    padding: 50px;
+
+  }
+
+  .con .heading h3{
+    font-size: 3em;
+    font-weight: bolder;
+    border-bottom: 3px solid whitesmoke;
+    color: #fff;
+  }
+
+  .con .heading h3 span{
+  font-weight: 100;
+
+}
+
+.con .img_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+}
+
+.con .img_box .c1{
+
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+}
+
+.con .img_box .c1 img{
+    width: 100%;
+    padding-bottom: 15px;
+    border-radius: 5px;
+}
+.con .btn{
+    margin: 40px 0 70px 0;
+    background: whitesmoke;
+    padding: 15px 40px;
+    border-radius: 5px;
+}
+
+.con .btn a{
+  color: black;
+  font-size: 1.2em;
+  text-decoration: none;
+  font-weight: bolder;
+  letter-spacing: 3px;
+}
+
+@media only screen and (max-width: 769px)
+{
+    .con .img_box{
+        flex-direction: column;
+       
+    }
+
+    .con .img_box .c1{
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 923px)
+{
+    .con .heading{
+        width: 100%;
+    
+      }
+    
+      .con .heading h3{
+        font-size: 2em;
+       
+      }
+}
+

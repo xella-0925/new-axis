@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="jarallax.css">
+    <link href="p1.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <script src="jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <header class="header"> 
+        <a href="#" class="logo"> <img src="nx1.png"> </a>
+        <ul class="navigation">
+         <li> <a href="p1.html">HOME</a></li>
+         <li> <a href="about.html">ABOUT</a></li>
+         <li> <a href="contact.html">CONTACT</a></li>
+         
+        </ul>
+ 
+     </header>
+    <section class="sec1">
+        <div class="box">
+           
+            <div class="container1">
+                <div class="img1 jarallax">
+                    <img src="p5.jpg" class="jarallax-img">
+                </div>
+               
+            </div>
+        </div>
+    </section>
+    <section class="sec">
+        <div  class="con "  >
+            <div class="cards">
+                <div class="text-cards">
+                    <h3> GALLERY</h3>
+                    <div class="gal_con"> 
+                        <a href="GALLERY.html"><img src="we.jpg" class="img_g"></a>
+                    </div>
+                </div>
+                <div class="text-cards">
+                    <h3> VIDEOS</h3>
+                    <div class="vid_con"> 
+                        <a href="vids.html"><img src="play2.png" class="img_v"></a>
+                    </div>
+                </div>
+                <div class="text-cards">
+                    <h3> DISCOGRAPHY</h3>
+                    <div class="disc_con"> 
+                        <a href="disco.html"><img src="hello-.png" class="img_d"></a>
+                    </div>
+            </div>
+
+        </div>
+
+    </section>
+        
+    <section>
+        <div class="box">
+            <h2 data-jarallax-element="0. -200"> Lee Jeno</h2>
+            <div class="container">
+                <div class="img1 jarallax">
+                    <img src="j10.jfif" class="jarallax-img">
+                </div>
+            
+                <div class="content" data-jarallax-element="-200 .0">
+                    <h3> Who is Lee Jeno?</h3>
+                    <br>
+                    <p> Jeno is a South Korean rapper, dancer, singer, and songwriter born in Incheon on April 23, 
+                        2000 and later grew up in Ilsandong-gu, Goyang-si, Gyeonggi-do. He is the main rapper, 
+                        lead dancer, sub-vocalist of NCT DREAM and NCT U. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="box">
+            <h2 data-jarallax-element="0. -200"> Facts</h2>
+            <div class="container">
+                <div class="img1 jarallax">
+                    <img src="j8.jfif" class="jarallax-img">
+                </div>
+            
+                <div class="content" data-jarallax-element="-200 .0">
+                    <h3> Facts about Jeno</h3> <br>
+                    <p>
+                        – Jeno has an older sister.<br>
+                        – Education: Seoul School of Performing Arts <br>
+                        – He was a model when he was a child and filmed various CFs. <br>
+                        – Specialty: Acting <br>
+                        – He is the Lead Dancer, Lead Rapper and Sub Vocalist of NCT Dream (Source: Melon, Grazia photoshoot 2017).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="box">
+            <h2 data-jarallax-element="0. -200"> Latest News</h2>
+            <div class="container">
+                <div class="img1 jarallax">
+                    <img src="f.jfif" class="jarallax-img">
+                </div>
+            
+                <div class="content" data-jarallax-element="-200 .0">
+                    <h3> F/W 2023 in Milan</h3>
+                    <p> On, February 26, 2023, Jeno attended the Salvatore Ferragamo Fall/Winter 2023-2024 Show. 
+                        With only two posts alone, he generated a total of 4.5 Million EMV (44% Engagement Rate).<br>
+                        (Source: Lefty.io)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="box">
+            <h2 data-jarallax-element="0. -200"> FerragamoXJENO</h2>
+            <div class="container">
+                <div class="img1 jarallax">
+                    <img src="p5 - Copy.jpg" class="jarallax-img">
+                </div>
+            
+                <div class="content" data-jarallax-element="-200 .0">
+                    <p> Ferragam welcomes NCT's JENO as First Golbal Male Ambassador.
+
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="jarallax.js"></script>
+    <script src="jarallax-element.js"></script>
+    <script type="text/javascript">
+        jarallax(document.querySelectorAll('.jarallax'), {
+            speed: 0.5,
+        });
+    </script>
+    <script type="text/javascript">
+        window.addEventListener('scroll', reveal);
+
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal')
+
+            for(var i=0; i < reveals.length; i++){
+
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint = 150;
+
+            if (revealtop < windowheight - revealpoint){
+                reveals[i].classlist.add('active');
+            }
+            else{
+                reveals[i].classlist.remove('active');
+            }
+
+          }
+        }
+    </script>
+
+
+    
+</body>
+</html>
